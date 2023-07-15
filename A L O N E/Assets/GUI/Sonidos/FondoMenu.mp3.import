@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/FondoMenu.mp3-f1bf470cb5a9cabedd299acde29ca95f.mp3str"
+
+[deps]
+
+source_file="res://Assets/GUI/Sonidos/FondoMenu.mp3"
+dest_files=[ "res://.import/FondoMenu.mp3-f1bf470cb5a9cabedd299acde29ca95f.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

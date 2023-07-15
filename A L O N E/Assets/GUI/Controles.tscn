@@ -1,0 +1,146 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Assets/GUI/Scripts/Controles.gd" type="Script" id=1]
+[ext_resource path="res://Assets/GUI/Sonidos/Co&Sh.mp3" type="AudioStream" id=2]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Assets/GUI/Fonts/NokiaCellphoneFC.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 35
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFontData" id=3]
+font_path = "res://Assets/GUI/Fonts/NokiaCellphoneFC.ttf"
+
+[sub_resource type="DynamicFont" id=4]
+size = 20
+font_data = SubResource( 3 )
+
+[sub_resource type="DynamicFontData" id=5]
+font_path = "res://Assets/GUI/Fonts/NokiaCellphoneFC.ttf"
+
+[sub_resource type="DynamicFont" id=6]
+size = 20
+extra_spacing_bottom = -6
+font_data = SubResource( 5 )
+
+[sub_resource type="DynamicFontData" id=7]
+font_path = "res://Assets/GUI/Fonts/NokiaCellphoneFC.ttf"
+
+[sub_resource type="DynamicFont" id=8]
+size = 20
+font_data = SubResource( 7 )
+
+[sub_resource type="StyleBoxEmpty" id=9]
+
+[node name="Controles" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 384.0
+margin_bottom = 216.0
+color = Color( 0.207843, 0.258824, 0.34902, 1 )
+
+[node name="Titulo" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+margin_top = 12.0
+margin_bottom = 32.0
+alignment = 1
+
+[node name="Label" type="Label" parent="Titulo"]
+margin_right = 384.0
+margin_bottom = 40.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Controles"
+align = 1
+valign = 1
+
+[node name="Mov" type="VBoxContainer" parent="."]
+anchor_bottom = 1.0
+margin_left = 48.0
+margin_top = 48.0
+margin_right = 176.0
+margin_bottom = -32.0
+alignment = 1
+
+[node name="Label" type="Label" parent="Mov"]
+margin_right = 130.0
+margin_bottom = 49.0
+custom_colors/font_color = Color( 0.0392157, 0.631373, 0.866667, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "MOVIMIENTO
+-----"
+align = 1
+
+[node name="Label2" type="Label" parent="Mov"]
+margin_top = 53.0
+margin_right = 130.0
+margin_bottom = 154.0
+custom_colors/font_color = Color( 0.47451, 0.854902, 0.909804, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "Derecha: →
+Izquierda: ←	
+Saltar Escenas: Espacio
+"
+
+[node name="Ataque" type="VBoxContainer" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -176.0
+margin_top = 48.0
+margin_right = -80.0
+margin_bottom = -40.0
+
+[node name="Label" type="Label" parent="Ataque"]
+margin_right = 130.0
+margin_bottom = 37.0
+custom_colors/font_color = Color( 0.0392157, 0.631373, 0.866667, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "ACCIONES
+-----"
+align = 1
+
+[node name="Label2" type="Label" parent="Ataque"]
+margin_top = 41.0
+margin_right = 130.0
+margin_bottom = 118.0
+custom_colors/font_color = Color( 0.47451, 0.854902, 0.909804, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "Saltar: Z
+Atacar: X
+Bajar de Plataforma: ↓
+Salto Pared: Z + Z"
+
+[node name="Back" type="VBoxContainer" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -29.0
+margin_bottom = -8.0
+
+[node name="Button" type="Button" parent="Back"]
+margin_right = 384.0
+margin_bottom = 29.0
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 0.509804 )
+custom_fonts/font = SubResource( 8 )
+custom_styles/focus = SubResource( 9 )
+text = "Regresar"
+flat = true
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+volume_db = -5.0
+autoplay = true
+
+[connection signal="pressed" from="Back/Button" to="." method="_on_Button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

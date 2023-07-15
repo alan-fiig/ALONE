@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Boss.mp3-1d8e449975a360d14751ba9ba18f520c.mp3str"
+
+[deps]
+
+source_file="res://Assets/Game/Mundo/Musica/Boss.mp3"
+dest_files=[ "res://.import/Boss.mp3-1d8e449975a360d14751ba9ba18f520c.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Hit.ogg-ad81d44575adec1f1d39460ef1507008.oggstr"
+
+[deps]
+
+source_file="res://Assets/Personajes/Prota/Sonidos/Hit.ogg"
+dest_files=[ "res://.import/Hit.ogg-ad81d44575adec1f1d39460ef1507008.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

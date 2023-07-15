@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Lvl2.mp3-9429e07dca74c6cd701b52cd6eeffbad.mp3str"
+
+[deps]
+
+source_file="res://Assets/Game/Mundo/Musica/Lvl2.mp3"
+dest_files=[ "res://.import/Lvl2.mp3-9429e07dca74c6cd701b52cd6eeffbad.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

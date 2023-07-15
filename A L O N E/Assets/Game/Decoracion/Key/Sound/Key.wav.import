@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Key.wav-778fd9290d3859487602936d577415be.sample"
+
+[deps]
+
+source_file="res://Assets/Game/Decoracion/Key/Sound/Key.wav"
+dest_files=[ "res://.import/Key.wav-778fd9290d3859487602936d577415be.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

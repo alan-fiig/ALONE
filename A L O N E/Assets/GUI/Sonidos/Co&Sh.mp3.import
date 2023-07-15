@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Co&Sh.mp3-c4f6799adc3905142bc9b628818fdc97.mp3str"
+
+[deps]
+
+source_file="res://Assets/GUI/Sonidos/Co&Sh.mp3"
+dest_files=[ "res://.import/Co&Sh.mp3-c4f6799adc3905142bc9b628818fdc97.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

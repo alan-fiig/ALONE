@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Life.wav-2e101b97d8f2bb85edf88de67db5f1f5.sample"
+
+[deps]
+
+source_file="res://Assets/Game/Decoracion/Life/Life.wav"
+dest_files=[ "res://.import/Life.wav-2e101b97d8f2bb85edf88de67db5f1f5.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

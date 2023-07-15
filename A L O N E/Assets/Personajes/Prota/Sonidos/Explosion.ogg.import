@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Explosion.ogg-0dfb81f42a8c4f4584a671fb6917739a.oggstr"
+
+[deps]
+
+source_file="res://Assets/Personajes/Prota/Sonidos/Explosion.ogg"
+dest_files=[ "res://.import/Explosion.ogg-0dfb81f42a8c4f4584a671fb6917739a.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

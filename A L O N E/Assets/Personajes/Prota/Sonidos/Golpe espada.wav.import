@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Golpe espada.wav-984d3c7a0a7d968f9e5c17f7633931fb.sample"
+
+[deps]
+
+source_file="res://Assets/Personajes/Prota/Sonidos/Golpe espada.wav"
+dest_files=[ "res://.import/Golpe espada.wav-984d3c7a0a7d968f9e5c17f7633931fb.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

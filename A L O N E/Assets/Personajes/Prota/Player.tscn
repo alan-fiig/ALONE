@@ -1,0 +1,260 @@
+[gd_scene load_steps=33 format=2]
+
+[ext_resource path="res://Assets/Personajes/Prota/Animaciones/Fullmain.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Personajes/Prota/Sonidos/Jump.ogg" type="AudioStream" id=2]
+[ext_resource path="res://Assets/Personajes/Prota/Sonidos/Golpe espada.wav" type="AudioStream" id=3]
+[ext_resource path="res://Assets/Personajes/Prota/Scripts/Player1.gd" type="Script" id=4]
+[ext_resource path="res://Assets/Personajes/Prota/Sonidos/Espada2.wav" type="AudioStream" id=5]
+[ext_resource path="res://Assets/Personajes/Prota/Sonidos/Hit.ogg" type="AudioStream" id=6]
+
+[sub_resource type="Animation" id=50]
+resource_name = "Ataque1"
+length = 0.9
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 50, 51, 52, 53, 54, 55, 56, 57, 58, 59 ]
+}
+
+[sub_resource type="Animation" id=28]
+resource_name = "Ataque2"
+length = 0.9
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 40, 41, 42, 43, 44, 45, 46, 47, 48, 49 ]
+}
+
+[sub_resource type="Animation" id=51]
+resource_name = "Caida"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 25, 26, 27, 28, 29 ]
+}
+
+[sub_resource type="Animation" id=52]
+resource_name = "Correr"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 10, 11, 12, 13, 14, 15 ]
+}
+
+[sub_resource type="Animation" id=48]
+resource_name = "Daño"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=29]
+resource_name = "Reposo"
+length = 0.3
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+
+[sub_resource type="Animation" id=54]
+resource_name = "Salto"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 20, 21, 22, 23, 24 ]
+}
+
+[sub_resource type="AnimationNodeAnimation" id=30]
+animation = "Ataque1"
+
+[sub_resource type="AnimationNodeAnimation" id=31]
+animation = "Ataque2"
+
+[sub_resource type="AnimationNodeAnimation" id=32]
+animation = "Caida"
+
+[sub_resource type="AnimationNodeAnimation" id=33]
+animation = "Correr"
+
+[sub_resource type="AnimationNodeAnimation" id=34]
+animation = "Reposo"
+
+[sub_resource type="AnimationNodeAnimation" id=35]
+animation = "Salto"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=36]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=37]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=38]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=39]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=40]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=41]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=42]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=43]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=44]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=45]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id=46]
+states/Ataque1/node = SubResource( 30 )
+states/Ataque1/position = Vector2( 341, 423 )
+states/Ataque2/node = SubResource( 31 )
+states/Ataque2/position = Vector2( 580, 423 )
+states/Caida/node = SubResource( 32 )
+states/Caida/position = Vector2( 816, 109 )
+states/Correr/node = SubResource( 33 )
+states/Correr/position = Vector2( 816, 265 )
+states/Reposo/node = SubResource( 34 )
+states/Reposo/position = Vector2( 580, 265 )
+states/Salto/node = SubResource( 35 )
+states/Salto/position = Vector2( 580, 109 )
+transitions = [ "Reposo", "Salto", SubResource( 36 ), "Salto", "Caida", SubResource( 37 ), "Caida", "Reposo", SubResource( 38 ), "Reposo", "Caida", SubResource( 39 ), "Correr", "Reposo", SubResource( 40 ), "Reposo", "Correr", SubResource( 41 ), "Reposo", "Ataque1", SubResource( 42 ), "Ataque1", "Ataque2", SubResource( 43 ), "Ataque1", "Reposo", SubResource( 44 ), "Ataque2", "Reposo", SubResource( 45 ) ]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=47]
+
+[sub_resource type="CapsuleShape2D" id=49]
+radius = 7.0
+height = 16.0
+
+[node name="Player" type="KinematicBody2D" groups=["Player"]]
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Particulas" type="CPUParticles2D" parent="."]
+position = Vector2( 0, 10 )
+emitting = false
+amount = 3
+lifetime = 0.35
+speed_scale = 1.6
+randomness = 0.2
+local_coords = false
+gravity = Vector2( 0, -98 )
+angular_velocity = 4.0
+linear_accel = 40.0
+scale_amount = 4.0
+scale_amount_random = 0.8
+color = Color( 1, 1, 1, 0.705882 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+hframes = 10
+vframes = 12
+frame = 40
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Ataque1 = SubResource( 50 )
+anims/Ataque2 = SubResource( 28 )
+anims/Caida = SubResource( 51 )
+anims/Correr = SubResource( 52 )
+"anims/Daño" = SubResource( 48 )
+anims/Reposo = SubResource( 29 )
+anims/Salto = SubResource( 54 )
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource( 46 )
+anim_player = NodePath("../AnimationPlayer")
+parameters/playback = SubResource( 47 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 2 )
+shape = SubResource( 49 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[node name="Sonidos" type="Node" parent="."]
+
+[node name="Saltar" type="AudioStreamPlayer" parent="Sonidos"]
+stream = ExtResource( 2 )
+volume_db = -5.0
+
+[node name="Golpe" type="AudioStreamPlayer" parent="Sonidos"]
+stream = ExtResource( 3 )
+
+[node name="Espada2" type="AudioStreamPlayer" parent="Sonidos"]
+stream = ExtResource( 5 )
+volume_db = -8.0
+
+[node name="Daño" type="AudioStreamPlayer" parent="Sonidos"]
+stream = ExtResource( 6 )
+volume_db = -8.0
+
+[node name="RayEnemigos" type="RayCast2D" parent="."]
+position = Vector2( 0, 6 )
+cast_to = Vector2( 30, 0 )
+
+[node name="RayParedes" type="RayCast2D" parent="."]
+position = Vector2( 0, -6 )
+cast_to = Vector2( 11, 0 )
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
